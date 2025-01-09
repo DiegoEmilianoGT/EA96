@@ -35,7 +35,10 @@ int main() {
     printf("\n\n¿desea repetir el programa?\n S)Si  N)No\n");
     scanf("%c", &op);
 
-      for (;op!='n'||'N' && op!='s'||'S';){}
+      for (;op!='n'||'N' && op!='s'||'S';) {
+        printf("Ingresa una opcion valida:\n");
+        scanf("%c", &op);
+      }
   }
   return 0;
 }
