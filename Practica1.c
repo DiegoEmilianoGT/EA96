@@ -25,10 +25,18 @@ void generateEvenNumbers(int limit) {
 }
 
 int main() {
-  printf("Ingrese el numero limite:\n");
-  scanf("%d", &limit);
-  limit = validatePositiveInt(limit);
-  generateEvenNumbers(limit);
+  for (char op='n';op=='n'||'N';){
+
+    printf("Ingrese el numero limite:\n");
+    scanf("%d", &limit);
+    limit = validatePositiveInt(limit);
+    generateEvenNumbers(limit);
+
+    printf("\n\n¿desea repetir el programa?\n S)Si  N)No\n");
+    scanf("%c", &op);
+
+      for (;op!='n'||'N' && op!='s'||'S';){}
+  }
   return 0;
 }
 
