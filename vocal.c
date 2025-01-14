@@ -42,7 +42,7 @@ void getInput(){
 }
 
 int main(){
-    getInput(phrase);
+    getInput();
     countVowels(phrase);
     countConsonants(phrase);
     return 0;
