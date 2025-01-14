@@ -12,12 +12,13 @@ int isVocal(int c) {
     if(c=='a' ||c=='e'||c=='i'||c=='o'||c=='u'){
         return 1;
     }
+    return 0;
 }
 
 int countVowels(char* phrase) {
     int vocales = 0, i=strlen(phrase);
     for(int y=0;y<i;y++){
-       if (isVocal(phrase[i]))
+       if (isVocal(phrase[y]))
             vocales++;
     }
     printf("\nEl numero de VOCALES que tiene la cadena es: %d\n", vocales);
@@ -26,11 +27,10 @@ int countVowels(char* phrase) {
 
 int countConsonants(char* phrase) {
     int count=0, i=strlen(phrase);
-    while (phrase[i]){
-        if (!isVocal(phrase[i])) {
+    for(int y=0;y<i;y++){
+        if (!isVocal(phrase[y])) {
             count++;
         }
-        i++;
     }
     printf("\nEl numero de CONSONANTES que tiene la cadena es: %d\n", count);
     return count;
