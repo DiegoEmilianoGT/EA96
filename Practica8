@@ -1,0 +1,15 @@
+
+
+public static int hourglassSum(List<List<Integer>> arr) {
+    // Write your code here
+    int sumaMax=0; //inicializamos una variable en 0 que tomara la suma maxima
+
+    for(int i=0;i<=3;i++){
+        for(int j=0;j<=3;j++){//creamos un for dentro de otro for para poder recorrer la matriz 2d
+            int sumA=arr.get(i).get(j)+arr.get(i).get(j+1)+arr.get(i).get(j+2)+arr.get(i+1).get(j+1)+arr.get(i+2).get(j)+arr.get(i+2).get(j+1)+arr.get(i+2).get(j+2);
+            //inicializamos una variable que tomara el valor de las sumas de las pocisiones selescionadas
+           sumaMax=Math.max(sumaMax,sumA);//aqui ocupamos la funcion de Math.max() en la cual compararemos las sumas realizadas y almacenamas en la variable sumA y devolvera el mayor y lo almacenaraa en la variable sumaMax hasta terminar el bucle
+        }
+    }
+    return sumaMax;//regresamos el valor de sumaMax
+    }
